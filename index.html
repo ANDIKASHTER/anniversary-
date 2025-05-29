@@ -35,27 +35,24 @@
   }
 
   .pentol {
-    position: absolute;
-    top: 20px;
-    width: 60px;
-    animation: floatUpDown 4s ease-in-out infinite;
-    pointer-events: none;
-    user-select: none;
-    display: none;
-    z-index: 15;
-  }
-  .pentol-1 { left: calc(50% - 180px); animation-delay: 0s; }
-  .pentol-2 { left: calc(50% - 120px); animation-delay: 0.3s; }
-  .pentol-3 { left: calc(50% - 60px); animation-delay: 0.6s; }
-  .pentol-4 { left: calc(50%); animation-delay: 0.9s; transform: translateX(-50%); }
-  .pentol-5 { left: calc(50% + 60px); animation-delay: 1.2s; }
-  .pentol-6 { left: calc(50% + 120px); animation-delay: 1.5s; }
-  .pentol-7 { left: calc(50% + 180px); animation-delay: 1.8s; }
+  .pentol {
+  position: fixed;
+  top: 60px; /* posisi dari atas layar, bisa kamu sesuaikan */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px; /* ukuran pentol jadi lebih besar */
+  pointer-events: none;
+  user-select: none;
+  display: none;
+  z-index: 15;
+  animation: none; /* matikan animasi bergerak */
+}
 
-  @keyframes floatUpDown {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-  }
+.pentol-1, .pentol-2, .pentol-3, .pentol-4, .pentol-5, .pentol-6, .pentol-7 {
+  left: 50%;
+  transform: translateX(-50%);
+  animation: none;
+}
 
   #letter {
     cursor: pointer;
